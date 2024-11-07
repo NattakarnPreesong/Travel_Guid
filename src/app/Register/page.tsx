@@ -59,7 +59,7 @@ export default function Page() {
             type="submit"
             className="w-full py-2 mt-4 bg-[#D61087] text-white rounded-md hover:bg-[#C6097A] transition duration-200"
           >
-            เข้าสู่ระบบ
+            ลงทะเบียน
           </button>
           <div className="relative flex items-center my-4">
             <div className="flex-grow border-t border-gray-300"></div>
