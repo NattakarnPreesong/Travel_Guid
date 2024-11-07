@@ -19,3 +19,28 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.skeleton {
+  background: linear-gradient(
+    -90deg,
+    #f0f0f0 0%,
+    #e0e0e0 50%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  
+  /* Adding a subtle drop shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow with slight blur and opacity */
+  border-radius: 8px; /* Optional: Rounded corners for the skeleton */
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
