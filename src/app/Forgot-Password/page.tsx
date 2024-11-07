@@ -69,7 +69,7 @@ export default function Page() {
           {isOtpVisible && (
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <span className="text-white text-sm w-1/4 text-center bg-gray-800 p-1 rounded-md">
+                <span className="text-white text-sm w-1/4 text-center bg-gray-800 p-1 h-auto rounded-md">
                   {formatTime(timer)}
                 </span>
                 <input
