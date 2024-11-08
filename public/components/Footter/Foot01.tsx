@@ -2,25 +2,32 @@
 
 import React from "react";
 import { HiHome, HiViewGridAdd, HiMap, HiChatAlt } from "react-icons/hi";
-import { AiFillSetting } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 
 function Foot01() {
   const menuItems = [
-    { icon: <HiHome className="text-2xl" />, label: "หน้าหลัก" },
-    { icon: <HiViewGridAdd className="text-2xl" />, label: "หมวดหมู่" },
-    { icon: <HiMap className="text-2xl" />, label: "แผนที่" },
-    { icon: <HiChatAlt className="text-2xl" />, label: "แชท" },
-    { icon: <AiFillSetting className="text-2xl" />, label: "อื่นๆ" },
+    { icon: HiHome, label: "หน้าหลัก" },
+    { icon: HiViewGridAdd, label: "หมวดหมู่" },
+    { icon: HiMap, label: "แผนที่" },
+    { icon: HiChatAlt, label: "แชท" },
+    { icon: AiOutlinePlus, label: "อื่นๆ" },
   ];
 
   return (
-    <div className="flex justify-around">
-      {menuItems.map((item, index) => (
-        <div key={index} className="flex flex-col items-center space-y-1">
-          {item.icon}
-          <span className="text-xs">{item.label}</span>
-        </div>
-      ))}
+    <div className="flex justify-around text-white">
+      {menuItems.map((item, index) => {
+        const IconComponent = item.icon;
+        return (
+          <button
+            key={index}
+            className="flex flex-col items-center px-3 text-xs focus:outline-none transition-transform duration-200 hover:scale-105"
+            aria-label={item.label}
+          >
+            <IconComponent className="text-2xl mb-1" />
+            <span>{item.label}</span>
+          </button>
+        );
+      })}
     </div>
   );
 }
