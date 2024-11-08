@@ -10,6 +10,8 @@ function Nav01() {
         src="/images/logo.png" // เปลี่ยนเป็น path ของโลโก้ของคุณ
         alt="Logo"
         className="w-10 h-10 mr-3"
+        width="60px"
+        height="auto"
       />
       {/* Search Bar */}
       <input
