@@ -1,19 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 
 function Nav01() {
   const menuItems = [
-    { label: "หน้าหลัก" },
-    { label: "หมวดหมู่" },
-    { label: "แผนที่" },
-    { label: "แชท" },
-    { label: "อื่นๆ" },
+    { label: "หน้าหลัก", part: "Home" },
+    { label: "หมวดหมู่", part: "Category" },
+    { label: "แผนที่", part: "Maps" },
+    { label: "แชท", part: "Chat" },
+    { label: "อื่นๆ", part: "Other" },
   ];
 
+  // State to store the current path
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    // Set the current path to the URL's path
+    setCurrentPath(window.location.pathname.toLowerCase());
+  }, []);
+
   return (
-    <div className="flex items-center w-full ">
+    <div className="flex items-center w-full">
       {/* Logo */}
       <img
         src="/images/Logo.png"
@@ -35,15 +43,23 @@ function Nav01() {
 
       {/* Navigation Links for Larger Screens */}
       <div className="hidden md:flex space-x-4">
-        {["หน้าหลัก", "หมวดหมู่", "แผนที่", "แชต", "อื่นๆ"].map((label, index) => (
-          <a
-            key={index}
-            href={`/${label}`}
-            className="rounded-full w-24 text-center px-3 py-2 text-sm font-medium bg-gradient-to-r from-[#922390] via-[#D61087] to-[#922390] text-gray-300 shadow-sm hover:opacity-90 transition-opacity"
-          >
-            {label}
-          </a>
-        ))}
+        {menuItems.map((item, index) => {
+          const isActive = currentPath.includes(item.part.toLowerCase()); // Check if the path includes the item part
+
+          return (
+            <a
+              key={index}
+              href={`/${item.part}`}
+              className={`rounded-full w-24 text-center px-3 py-2 text-sm font-medium shadow-sm transition-opacity ${
+                isActive
+                  ? "bg-pink-600 text-white"
+                  : "bg-pink-500 text-gray-300 hover:bg-pink-600"
+              }`}
+            >
+              {item.label}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

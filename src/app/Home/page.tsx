@@ -18,7 +18,7 @@ export default function Page() {
       </main>
 
       {/* Footer */}
-      <footer className="flex justify-center backdrop-blur-sm bg-black/60 p-3 md:hidden">
+      <footer>
         <Foot01 />
       </footer>
     </div>
