@@ -69,11 +69,11 @@ export default function Page() {
 
           <div className="flex justify-between space-x-4">
             <button className="flex items-center justify-center w-1/2 py-2 border-2 border-red-500 rounded-md text-red-500 bg-red-50 transition duration-200">
-              <img src="https://th.bing.com/th/id/R.7e557f1c0864829c54c300d15bee69f4?rik=fjZN1AYH30vXIw&riu=http%3a%2f%2fpngimg.com%2fuploads%2fgoogle%2fgoogle_PNG19635.png&ehk=ZmsumEtoeJQhKoUzQTZO2TEbYPBu0%2b7EFdjmJ3qljls%3d&risl=&pid=ImgRaw&r=0" alt="Google Icon" className="w-7 h-7 mr-2" />
+              <img src="/images/Icon-Google.png" alt="Google Icon" className="w-7 h-7 mr-2" />
               Google
             </button>
             <button className="flex items-center justify-center w-1/2 py-2 border-2 border-blue-500 rounded-md text-blue-500 bg-blue-50 transition duration-200">
-              <img src="https://media.discordapp.net/attachments/800367347944521738/1303636567398678599/vecteezy_facebook-logo-png-facebook-icon-transparent-png_18930702.png?ex=672c79aa&is=672b282a&hm=366404e9b373f2c413a992830e15b89f0334d4df3b923f4178057f001fd357f4&=&format=webp&quality=lossless&width=676&height=676" alt="Facebook Icon" className="w-7 h-7 mr-2" />
+              <img src="/images/Icon-Facebook.png" alt="Facebook Icon" className="w-7 h-7 mr-2" />
               Facebook
             </button>
           </div>

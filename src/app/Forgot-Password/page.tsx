@@ -1,4 +1,4 @@
-"use client"; // เพิ่มบรรทัดนี้ที่บรรทัดแรก
+"use client";
 
 import React, { useState, useEffect } from 'react';
 
