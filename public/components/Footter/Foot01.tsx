@@ -1,39 +1,28 @@
-import React from 'react'
-import {
-    HiHome,
-    HiViewGridAdd,
-    HiMap,
-    HiChatAlt
-} from "react-icons/hi";
+"use client";
+
+import React from "react";
+import { HiHome, HiViewGridAdd, HiMap, HiChatAlt } from "react-icons/hi";
 import { AiFillSetting } from "react-icons/ai";
 
 function Foot01() {
-    return (
-        <div>
-            <footer className="flex justify-around bg-purple-800 p-3 text-white">
-                <div className="flex flex-col items-center">
-                    <i><HiHome /></i>
-                    <span className="text-xs">หน้าหลัก</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <i><HiViewGridAdd /></i>
-                    <span className="text-xs">หมวดหมู่</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <i><HiMap  /></i>
-                    <span className="text-xs">แผนที่</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <i><HiChatAlt  /></i>
-                    <span className="text-xs">แชท</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <i><AiFillSetting /></i>
-                    <span className="text-xs">อื่นๆ</span>
-                </div>
-            </footer>
+  const menuItems = [
+    { icon: <HiHome className="text-2xl" />, label: "หน้าหลัก" },
+    { icon: <HiViewGridAdd className="text-2xl" />, label: "หมวดหมู่" },
+    { icon: <HiMap className="text-2xl" />, label: "แผนที่" },
+    { icon: <HiChatAlt className="text-2xl" />, label: "แชท" },
+    { icon: <AiFillSetting className="text-2xl" />, label: "อื่นๆ" },
+  ];
+
+  return (
+    <div className="flex justify-around">
+      {menuItems.map((item, index) => (
+        <div key={index} className="flex flex-col items-center space-y-1">
+          {item.icon}
+          <span className="text-xs">{item.label}</span>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
 
-export default Foot01
+export default Foot01;
