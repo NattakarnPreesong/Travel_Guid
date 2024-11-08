@@ -51,7 +51,7 @@ export default function Page() {
               <input
                 id="email"
                 type="email"
-                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
+                className="w-full px-3 py-2 text-black rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
                 placeholder="you@example.com"
                 required
               />
@@ -75,7 +75,7 @@ export default function Page() {
                 <input
                   id="otp"
                   type="text"
-                  className="w-3/4 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
+                  className="w-3/4 px-3 py-2 text-black rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
                   placeholder="รหัส OTP"
                   required
                 />
@@ -89,7 +89,7 @@ export default function Page() {
             <input
               id="password"
               type="password"
-              className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
+              className="w-full px-3 py-2 text-black rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
               placeholder="ป้อนอักขระ 6 ตัวขึ้นไป"
               required
             />
@@ -101,7 +101,7 @@ export default function Page() {
             <input
               id="confirm-password"
               type="password"
-              className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
+              className="w-full px-3 py-2 text-black rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
               placeholder="ป้อนอักขระ 6 ตัวขึ้นไป"
               required
             />

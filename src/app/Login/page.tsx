@@ -19,7 +19,7 @@ export default function Page() {
             <input
               id="email"
               type="email"
-              className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
+              className="w-full px-3 py-2 rounded-md border text-black border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
               placeholder="you@example.com"
               required
             />
@@ -27,14 +27,14 @@ export default function Page() {
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm">
               <span className="block text-white text-lg">รหัสผ่าน</span>
-              <a href="/Forgot-Password" className="text-[#F5007F] border-b border-[#F5007F] hover:text-white transition duration-200">
+              <a href="/Forgot-Password" className="text-[#F5007F] border-b border-[#F5007F] hover:text-white  transition duration-200">
                 ลืมรหัสผ่าน?
               </a>
             </div>
             <input
               id="password"
               type="password"
-              className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
+              className="w-full px-3 py-2 rounded-md border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-[#F5007F] focus:border-transparent"
               placeholder="ป้อนอักขระ 6 ตัวขึ้นไป"
               required
             />
