@@ -3,7 +3,7 @@ import React from 'react';
 export default function Page() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#FF637D] via-[#D61087] to-[#922390]">
-      <form className="backdrop-blur-sm bg-white/40 w-80 md:w-3/12 h-auto md:h-3/5 rounded-lg shadow-lg">
+      <form className="backdrop-blur-sm bg-white/40 w-80 md:w-3/12 h-auto md:h-3/5 rounded-lg shadow-lg" action="/Login">
         <div className="p-6 md:p-8 space-y-3">
           <header className="space-y-2">
             <h2 className="text-[#9B0223] text-3xl font-semibold">ลงทะเบียน</h2>
