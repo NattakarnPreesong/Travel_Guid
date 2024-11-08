@@ -73,7 +73,7 @@ export default function Page() {
               Google
             </button>
             <button className="flex items-center justify-center w-1/2 py-2 border-2 border-blue-500 rounded-md text-blue-500 bg-blue-50 transition duration-200">
-              <img src="/images/Icon-Facebook.png" alt="Facebook Icon" className="w-7 h-7 mr-2" />
+              <img src="/images/Icon-Facebook.png" alt="Facebook Icon" className="w-3 h-5 mr-2" />
               Facebook
             </button>
           </div>
