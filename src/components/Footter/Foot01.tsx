@@ -20,7 +20,7 @@ function Foot01() {
         return (
           <button
             key={index}
-            className="flex flex-col items-center px-3 text-xs focus:outline-none transition-transform duration-200 hover:scale-105"
+            className="flex flex-col items-center px-4 text-xs focus:outline-none transition-transform duration-200 hover:scale-105 hover:text-blue-300"
             aria-label={item.label}
           >
             <IconComponent className="text-2xl mb-1" />
