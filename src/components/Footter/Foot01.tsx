@@ -32,7 +32,7 @@ function Foot01() {
             key={index}
             href={item.part}
             className={`flex flex-col items-center px-4 text-xs focus:outline-none transition-transform duration-200 ${
-              isActive ? "text-[#D61087] scale-105" : "hover:text-[#D61087]"
+              isActive ? "text-pink-400 scale-105" : "hover:text-pink-400"
             }`}
             aria-label={item.label}
           >
