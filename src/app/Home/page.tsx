@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Nav01 from "../../../public/components/Navbar/Nav01";
-import Foot01 from "../../../public/components/Footter/Foot01";
+import Nav01 from "../../components/Navbar/Nav01";
+import Foot01 from "../../components/Footter/Foot01";
 
 export default function Page() {
   return (
