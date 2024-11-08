@@ -12,17 +12,17 @@ function Nav01() {
     { label: "อื่นๆ", part: "Other" },
   ];
 
-  // State to store the current path
+  // เพื่อจัดเก็บเส้นทางปัจจุบัน
   const [currentPath, setCurrentPath] = useState("");
 
   useEffect(() => {
-    // Set the current path to the URL's path
+    // ตั้งค่าเส้นทางปัจจุบันเป็นเส้นทางของ URL
     setCurrentPath(window.location.pathname.toLowerCase());
   }, []);
 
   return (
     <div className="flex items-center w-full">
-      {/* Logo */}
+      {/* โลโก้ */}
       <img
         src="/images/Logo.png"
         alt="Logo"
@@ -31,7 +31,7 @@ function Nav01() {
         height="auto"
       />
 
-      {/* Search Bar */}
+      {/* แถบค้นหา */}
       <div className="relative flex-grow ml-4 mr-4">
         <HiOutlineSearch className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
         <input
@@ -41,10 +41,10 @@ function Nav01() {
         />
       </div>
 
-      {/* Navigation Links for Larger Screens */}
+      {/* ลิงค์การนําทางสําหรับหน้าจอขนาดใหญ่ */}
       <div className="hidden md:flex space-x-4">
         {menuItems.map((item, index) => {
-          const isActive = currentPath.includes(item.part.toLowerCase()); // Check if the path includes the item part
+          const isActive = currentPath.includes(item.part.toLowerCase()); // ตรวจสอบว่าเส้นทางมีส่วนของรายการหรือไม่
 
           return (
             <a

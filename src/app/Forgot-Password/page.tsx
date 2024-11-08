@@ -3,31 +3,43 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Page() {
+  // สถานะเพื่อควบคุมการมองเห็น OTP (ไม่ว่าจะแสดงอินพุต OTP หรือไม่ก็ตาม)
   const [isOtpVisible, setIsOtpVisible] = useState(false);
+  // สถานะเพื่อจัดเก็บเวลาที่เหลือเป็นวินาทีสําหรับตัวจับเวลา OTP
   const [timer, setTimer] = useState(120);
 
+  // ฟังก์ชั่นจัดการปุ่ม OTP คลิก
   const handleOtpClick = () => {
+    // แสดงอินพุต OTP และรีเซ็ตตัวจับเวลาเป็น 120 วินาที
     setIsOtpVisible(true);
     setTimer(120);
   };
 
+  // useEffect เพื่อจัดการกับตรรกะของตัวจับเวลาถอยหลัง
   useEffect(() => {
-    let countdown: string | number | NodeJS.Timeout | undefined;
+    let countdown: string | number | NodeJS.Timeout | undefined; // ประกาศตัวแปรเพื่อเก็บรหัสช่วงเวลา
+    
+    // หากมองเห็น OTP และตัวจับเวลามากกว่า 0 ให้เริ่มนับถอยหลัง
     if (isOtpVisible && timer > 0) {
       countdown = setInterval(() => {
+        // ลดตัวจับเวลา 1 ทุกวินาที
         setTimer((prevTime) => prevTime - 1);
       }, 1000);
     } else if (timer === 0) {
+      // เมื่อตัวจับเวลาถึง 0 ให้หยุดการนับถอยหลังและซ่อนอินพุต OTP
       clearInterval(countdown);
       setIsOtpVisible(false);
     }
-    return () => clearInterval(countdown);
-  }, [isOtpVisible, timer]);
 
+    // ล้างช่วงเวลาเมื่อการยกเลิกการต่อเชื่อมคอมโพเนนต์หรือการขึ้นต่อกันมีการเปลี่ยนแปลง
+    return () => clearInterval(countdown);
+  }, [isOtpVisible, timer]); // Dependencie: จะทํางานอีกครั้งหากมีการเปลี่ยนแปลง 'isOtpVisible' หรือ 'timer'
+
+  // ฟังก์ชั่นฟอร์แมตเวลาที่เหลือในรูปแบบ MM:SS
   const formatTime = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    const minutes = Math.floor(seconds / 60); // คํานวณนาที
+    const secs = seconds % 60; // คํานวณวินาทีที่เหลือ
+    return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`; // รูปแบบเป็น MM:SS
   };
 
   return (

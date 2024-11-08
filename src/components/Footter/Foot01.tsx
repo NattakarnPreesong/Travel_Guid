@@ -13,11 +13,11 @@ function Foot01() {
     { icon: AiOutlinePlus, label: "อื่นๆ", part: "/Other" },
   ];
 
-  // State to store the current path
+  // เพื่อจัดเก็บเส้นทางปัจจุบัน
   const [currentPath, setCurrentPath] = useState("");
 
   useEffect(() => {
-    // Set the current path to the URL's path
+    // ตั้งค่าเส้นทางปัจจุบันเป็นเส้นทางของ URL
     setCurrentPath(window.location.pathname);
   }, []);
 
@@ -25,7 +25,7 @@ function Foot01() {
     <div className="flex justify-around text-white backdrop-blur-sm bg-black/50 py-3 shadow-lg rounded-t-lg md:hidden">
       {menuItems.map((item, index) => {
         const IconComponent = item.icon;
-        const isActive = currentPath === item.part; // Check if the link is active
+        const isActive = currentPath === item.part; // ตรวจสอบว่าลิงก์ทํางานอยู่หรือไม่
 
         return (
           <a
