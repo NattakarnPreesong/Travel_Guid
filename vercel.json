@@ -1,1 +1,12 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ],
+    
+    "env": {
+      "PNPM_FROZEN_LOCKFILE": "false"
+    }
+}
